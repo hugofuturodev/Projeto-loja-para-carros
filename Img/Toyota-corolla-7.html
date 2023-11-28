@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Interna + Projeto para Loja de Carros</title>
+
+    <!-- <!Abaixo está a e " Exo 2 " -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+        <style>
+            * {
+                font-family: "Exo 2", sans-serif;
+            }
+
+            img {
+                margin: 0;
+                padding: 0;
+
+            }
+
+
+
+            #menu-header {
+                background: #fff;
+
+            }
+
+            #menu-header .container {
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+            }
+
+
+            #menu-header ul {
+                display: flex;
+                list-style: none;
+            }
+
+            #menu-header ul li {
+                padding: 0 10px;
+            }
+
+            #menu-header ul li a {
+                color: #fff;
+                font-size: 14px;
+                font-weight: 500;
+                color: #000;
+                text-decoration: none;
+
+            }
+
+            #menu-header ul li a:hover {
+                text-decoration: underline;
+            }
+
+
+
+
+            /* Mapa abaixo */
+
+            #localizacao {
+                margin: 60px;
+            }
+
+            #localizacao iframe {
+                margin: 20px 0 30px 0;
+                margin-top: 20px;
+            }
+
+
+            /* Botão abaixo do Mapa */
+
+
+            #botoes {
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+
+            }
+
+            #botoes a {
+                background: #A50505;
+                padding: 10px 0;
+                width: 100%;
+                text-decoration: none;
+                color: #fff;
+                text-align: center;
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            #botoes a:hover {
+                text-decoration: underline;
+            }
+
+            /* imagens Pequenas e Grande */
+
+
+            #imagens {
+                max-width: 60px 0;
+                text-align: center;
+            }
+
+            #imagens .container {
+                max-width: 900px;
+
+            }
+
+            #imagens #imagens-grande {
+                width: 100%;
+                text-align: center;
+
+            }
+
+            #imagens #imagens-pequenas {
+
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                text-align: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            #imagens #imagens-pequenas img {
+                max-width: 25%
+            }
+
+            #informacoes .container {
+                display: flex;
+                justify-content: space-around;
+            }
+
+            h1 {
+                font-size: 30px;
+                font-weight: 800;
+            }
+
+            h2 {
+                font-size: 44px;
+                font-weight: bold;
+                color: #A50505;
+                min-width: 350px;
+            }
+
+            h3 {
+                font-weight: 500;
+                font-size: 14px;
+                color: #999999;
+                margin-bottom: 30px;
+            }
+
+            p {
+                font-size: 16px;
+                font-weight: 500;
+                max-width: 600px;
+            }
+
+            .botao {
+                display: block;
+                background: #A50505;
+                padding: 20px 10px;
+                font-size: 18px;
+                text-decoration: none;
+                font-weight: 700;
+                text-align: center;
+                color: #ffffff;
+                letter-spacing: 9%;
+            }
+
+            footer #topo-footer {
+                background: #000;
+                padding: 30px 0;
+                margin-top: 20px;
+
+            }
+
+            footer #topo-footer #menu-footer {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            footer #topo-footer #menu-footer ul {
+                display: flex;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+
+            footer #topo-footer #menu-footer ul li {
+                padding: 0 10px;
+
+            }
+
+            footer #topo-footer #menu-footer ul li a {
+                display: block;
+                font-size: 12px;
+                font-weight: 600;
+                color: #fff;
+                text-decoration: none;
+            }
+
+            footer #topo-footer #menu-footer a:hover {
+                transition: ease-in 0, 1s;
+                transform: scale(1.4);
+            }
+
+            #ultimo-texto {
+                padding: 10px 0;
+                font-size: 16px;
+                font-weight: 600;
+                text-align: center;
+            }
+
+            @media screen and (max-width: 988px) {
+                #imagens {
+                    padding: 10px;
+                }
+
+                #imagens #imagens-pequenas {
+                    flex-direction: column;
+                }
+
+                #imagens #imagens-pequenas img {
+                    max-width: 100%;
+                }
+
+                #informacoes {
+                    padding: 10px;
+                    text-align: center;
+                }
+
+                #informacoes .container {
+                    flex-direction: column;
+                }
+
+                #localizacao {
+                    padding: 20px;
+                }
+
+                #botoes {
+                    flex-direction: column;
+                    gap: 20px;
+                }
+
+                footer #topo-footer #menu-footer {
+                    flex-direction: column;
+                }
+
+                footer #topo-footer #menu-footer ul {
+                    display: none;
+                }
+
+                #inverter-responsivo {
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+            }
+        </style>
+
+</head>
+
+<body>
+    <header>
+        <div id="menu-header">
+            <div class="container">
+                <div id="menu-logo">
+                    <img src="./logo.png" alt="logo super carro" />
+                </div>
+                <ul>
+                    <li>
+                        <a class="menu-botao" href="/">HOME</a>
+                    </li>
+                    <li>
+                        <a class="menu-botao" href="#imagens">LOJA</a>
+                    </li>
+                    <li>
+                        <a class="menu-botao" href="#localizacao">CONTATO</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <!--Aqui vai as Imagens da Página Interna ! -->
+
+    <div id="inverter-responsivo">
+        <section id="imagens">
+            <div id="container">
+           <img src="./corolla_grande-removebg-preview.png" alt="Imagem Maior">
+                      <div class="imagens-pequenas">
+
+                    <img src="./toyota-corolla-frontal.png" alt="imagens-menores" />
+                    <img src="./toyota-corolla-frontal.png" alt="imagens-menores" />
+                    <img src="./toyota-corolla-frontal.png" alt="imagens-menores" />
+                   
+                </div>
+            </div>
+        </section>
+
+
+        <section id="informacoes">
+            <div class="container">
+                <div>
+                    <h1>TOYOTA - COROLLA </h1>
+                    <h3> 1.6 MSI TOTALFLEX 4P MANUA</h3>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ac fringilla lorem. Aliquam nec
+                        neque eros. Maecenas varius dolor vel diam venenatis molestie. Aliquam lacinia iaculis mi in
+                        pharetra. Vivamus in pretium lectus. Sed at consectetur nibh. Etiam imperdiet orci quis nibh
+                        rhoncus malesuada. Mauris suscipit tristique felis, non tristique lacus. Proin sit amet mi
+                        viverra, laoreet lectus nec, consequat sem.</p>
+                </div>
+                <div>
+                    <h2>R$117.000</h2>
+                    <h3>2020/2021 </h3>
+                    <a target="_blank"
+                        href="https://api.whatsapp.com/send?phone={{5574981266131}}&text=Olá, eu estava no seu site olhando o Produto VW-T- Cross"
+                        class="botao">FALE COM A LOJA</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Mapa de localização Aqui abaixo ! -->
+    <section id="localizacao">
+        <div class="container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3924.9938084380483!2d-39.77105499028213!3d-10.342379589738563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x70d445985f84491%3A0xe89b776c3994f5c8!2sFerbasa!5e0!3m2!1spt-BR!2sbr!4v1700140162525!5m2!1spt-BR!2sbr"
+                width="600" height="350" style="border:0;width:100%" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <div id="botoes">
+        <a target="_blank" href="https://api.whatsapp.com/send?phone=5574981266131">ENVIAR
+            MENSAGEM NO WHATSAPP</a>
+        <a target="_blank" href="tel:981266131">LIGAR PRA MIM</a>
+        <a target="_blank" href="https://instagram.com/hugo_oficial_19">ENTRAR NO INSTAGRAM</a>
+    </div>
+    </div>
+    </section>
+
+    <footer>
+        <section id="topo-footer">
+            <div id="menu-footer" class="container">
+                <div>
+                    <img src="../Img/logo-footer.png" alt="Imagem da logo " />
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="#">HOME</a>
+                        <li>
+                            <a href="#">LOJA</a>
+                        </li>
+                        <li>
+                            <a href="#">CONTATO</a>
+                        </li>
+                    </ul>
+                </div>
+        </section>
+
+        <div id="ultimo-texto">
+            TODOS OS DIREITOS RESERVADOS
+        </div>
+    </footer>
+</body>
+</html>
